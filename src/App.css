@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 150%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 
+  Start for Hero 
+*/
+
+.hero {
+  background: linear-gradient(
+      to bottom,
+      rgba(3, 174, 210, 0.5) 90%,
+      rgba(3, 174, 210, 0.5)
+    ),
+    url('images/blake-wisz-tE6th1h6Bfk-unsplash.jpg') no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  height: 60vh;
+  width: 100%;
+  padding: 12px 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.logo img {
+  width: 32px;
+}
+
+.navbar {
+  height: 52px;
+  padding: 4px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-items:first-of-type {
+  margin-left: 32px;
+}
+
+.menu-items {
+  display: inline-block;
+  margin: 0 8px;
+  color: #fff;
+}
+
+.menu-items a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 500ms ease-in-out;
+}
+
+.menu-items a:hover {
+  color: #000;
+}
+
+.social-media {
+  margin-left: auto;
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+li.social-links {
+  margin: 0 12px;
+  display: inline-block;
+}
+li.social-links > a > img {
+  width: 18px;
+}
+
+/* 
+
+    Main for menu
+
+*/
+
+.container {
+  width: 100%;
+  margin-top: 0;
+}
+.main-menu {
+  margin-top: 5px;
+}
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main-list-items {
+  margin: 0 18px;
+  background-color: #fff;
+}
+
+.main-list-items::before {
+  position: relative;
+  left: 50%;
+  content: '';
+  border-width: 0 14px 15px 15px;
+  border-style: solid;
+  border-color: transparent transparent rgba(255, 255, 255) transparent;
+
+  margin-left: -8px;
+  top: -41px;
+  opacity: 0;
+  transition: opacity 800ms ease-in;
+}
+
+.main-list-items a {
+  color: #000;
+  font-size: 20px;
+}
+
+.main-list-items:hover::before {
+  opacity: 1;
+}
+
+.cards-collector {
+  background-color: #fff;
+  width: 100%;
+  padding: 0 40px;
+  margin-top: 40px;
+}
+.all-cards {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: aqua;
+  width: 360px;
+  height: 360px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 4px #ccc;
+  margin: 32px 25px;
+  position: relative;
+}
+
+.itemImage {
+  overflow: hidden;
+}
+
+.itemImage img {
+  width: 180%;
+}
+
+.itemText {
+  position: absolute;
+  background-color: rgba(3, 174, 210, 0.9);
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 12px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 900ms ease-in-out;
+  color: #fff;
+}
+
+.itemText h3,
+.itemText p {
+  text-align: center;
+}
+
+.itemText button {
+  outline: none;
+  border: none;
+  padding: 8px 18px;
+  margin: 8px;
+  background-color: #fdde55;
+  cursor: pointer;
+}
+
+.card:hover .itemText {
+  opacity: 1;
+}
+
+@media screen and (max-width: 575px) {
+  .card {
+    background-color: aqua;
+    width: 360px;
+    height: 360px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px #ccc;
+    margin: 12px auto;
+    position: relative;
+  }
+
+  .main-list-items {
+    margin: 0 8px;
+  }
+}
