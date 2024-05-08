@@ -1,10 +1,13 @@
 import React from 'react';
-
-const Navbar = () => {
+import Shopping from './shopping.png';
+import facebook from './facebook-logo.png';
+import instagram from './instagram.png';
+import linkedin from './linkedin.png';
+const SolidNav = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar" style={{ background: '#03AED2' }}>
       <div id="logo" className="logo">
-        <img src="images/shopping.png" alt="" />
+        <img src={Shopping} alt="" />
       </div>
       <ul className="nav-menu">
         <li className="menu-items">
@@ -15,20 +18,20 @@ const Navbar = () => {
           <a href="#">Register</a>
         </li>
       </ul>
-      <ul className="social-media">
+      <ul className="social-media" style={{ background: '#03AED2' }}>
         <li className="social-links">
           <a href="#">
-            <img src="images/facebook-logo.png" alt="" />
+            <img src={facebook} alt="" />
           </a>
         </li>
         <li className="social-links">
           <a href="#">
-            <img src="images/instagram.png" alt="" />
+            <img src={instagram} alt="" />
           </a>
         </li>
         <li className="social-links">
           <a href="#">
-            <img src="images/linkedin.png" alt="" />
+            <img src={linkedin} alt="" />
           </a>
         </li>
       </ul>
@@ -36,4 +39,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default SolidNav;
