@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../card/Card';
-const Main = () => {
+const Main = (props) => {
   const [data, setData] = useState([]);
   const myData = async () => {
     const response = await fetch(
@@ -10,12 +10,17 @@ const Main = () => {
       }
     );
     const city = await response.json();
-    console.log(city);
-    setData(city);
+    if (props.soD == 'none') {
+      setData(city);
+    } else if (props.soD == 'byName') {
+      const D = city.sort();
+      setData(D);
+    }
   };
   useEffect(() => {
     myData();
   }, []);
+
   return (
     <section className="cards-collector">
       <ul className="all-cards">

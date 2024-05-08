@@ -3,6 +3,7 @@ import Shopping from './shopping.png';
 import facebook from './facebook-logo.png';
 import instagram from './instagram.png';
 import linkedin from './linkedin.png';
+import { Link } from 'react-router-dom';
 const SolidNav = () => {
   return (
     <nav className="navbar" style={{ background: '#03AED2' }}>
@@ -16,6 +17,10 @@ const SolidNav = () => {
         <li className="menu-items">|</li>
         <li className="menu-items">
           <a href="#">Register</a>
+        </li>
+        <li className="menu-items">|</li>
+        <li className="menu-items">
+          <Link to="/">Home</Link>
         </li>
       </ul>
       <ul className="social-media" style={{ background: '#03AED2' }}>
