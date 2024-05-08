@@ -18,14 +18,6 @@ a {
 */
 
 .hero {
-  background: linear-gradient(
-      to bottom,
-      rgba(3, 174, 210, 0.5) 90%,
-      rgba(3, 174, 210, 0.5)
-    ),
-    url('images/blake-wisz-tE6th1h6Bfk-unsplash.jpg') no-repeat;
-  background-size: cover;
-  background-position-y: center;
   height: 60vh;
   width: 100%;
   padding: 12px 40px;
